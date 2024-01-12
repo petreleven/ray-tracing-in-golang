@@ -29,12 +29,13 @@ This project is a Go implementation of the ray casting techniques introduced in 
 
 ### Prerequisites
 
-- Go (at least Go 1.13)
+- Go (at least Go 1.21.3)
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ray-casting-go.git
+   git clone https://github.com/petreleven/ray-tracing-in-golang.git
    cd ray-casting-go
+   go run main.go
