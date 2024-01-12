@@ -83,6 +83,7 @@ func (v *Vec3) Multiply(u *Vec3) *Vec3 {
 func (v *Vec3) MultiplybyFloat(t float64) *Vec3 {
 	return CreateVec3(v.e[0]*t, v.e[1]*t, v.e[2]*t)
 }
+
 func (v *Vec3) DividebyFloat(t float64) *Vec3 {
 	return CreateVec3(v.e[0]/t, v.e[1]/t, v.e[2]/t)
 }
@@ -102,10 +103,6 @@ func (v *Vec3) UnitVector() Vec3 {
 	return *CreateVec3(v.e[0]/v.Length(), v.e[1]/v.Length(), v.e[2]/v.Length())
 }
 
-type Point3 struct {
-	Vec3
-}
-
 type Color struct {
 	Vec3
 }
@@ -115,8 +112,4 @@ func (pixelColor Color) WriteColor() {
 }
 func CreateColor(r, g, b float64) *Color {
 	return &Color{Vec3: *CreateVec3(r, g, b)}
-}
-
-func CreatePoint3(x, y, z float64) *Point3{
-	return &Point3{Vec3: *CreateVec3(x, y, z)}
 }
